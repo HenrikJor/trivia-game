@@ -1,0 +1,69 @@
+# Ignore files for .NET backend
+bin/
+obj/
+*.db
+*.db-journal
+appsettings*.json
+secrets.json
+.vscode/
+.env
+*.log
+logs/
+node_modules/
+dist/
+out/
+.idea/
+.DS_Store
+
+# Ignore dependency files
+*.lock
+*.cache
+
+# Ignore Visual Studio / Rider / VS Code files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.cache
+*.ncb
+*.opendb
+*.VC.db
+
+# Ignore build output
+wwwroot/
+!wwwroot/index.html  # Keep index.html for frontend
+publish/
+coverage/
+TestResults/
+__pycache__/
+
+# Ignore npm/Yarn/PNPM dependencies (for React frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/.nuxt/
+frontend/dist/
+frontend/out/
+frontend/build/
+
+# Ignore logs & environment files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.ps1
+*.pidb
+
+# Ignore Python virtual environments (if applicable)
+venv/
