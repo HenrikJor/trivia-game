@@ -18,10 +18,11 @@ public class TriviaController : ControllerBase
 
 
     [HttpGet("questions")]
-    public async Task<IActionResult> GetQuestionsAsync(int amount = 5, string difficulty = "medium"){
-        var question = await _triviaService.GetQuestionsAsync(amount, difficulty);
-
-    foreach (var q in question) 
+    public async Task<IActionResult> GetQuestionAsync(string difficulty = "medium"){
+        var question = await _triviaService.GetQuestionsAsync(difficulty);
+        if (question == null){
+            return NotFound("No question found");
+        }
         return Ok(question);
     }
 
